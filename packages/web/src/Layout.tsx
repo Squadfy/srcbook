@@ -21,15 +21,16 @@ export default function Layout(props: { children: React.ReactNode }) {
   const { theme } = useTheme();
 
   if (loading) {
-    return;
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="items-center justify-center flex-col p-8 shadow-md rounded-lg text-center flex flex-column">
-        <div>Loading...</div>
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="items-center text-2xl justify-center flex-col p-8 rounded-lg text-center flex flex-column">
+          <div>Carregando...</div>
+        </div>
       </div>
-    </div>;
+    );
   }
 
-  if (!user) {
+  if (!user || !user.email?.endsWith('@squadfy.com.br')) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="items-center justify-center flex-col p-8 shadow-md rounded-lg text-center flex flex-column">
