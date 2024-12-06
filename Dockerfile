@@ -3,6 +3,8 @@ WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@9.12.1 --activate
 
+RUN apk add --no-cache git
+
 ARG ANTHROPIC_API_KEY
 
 ENV ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
