@@ -140,3 +140,17 @@ If you want to disable tracking, you can run Srcbook with `SRCBOOK_DISABLE_ANALY
 ## Contributing
 
 For development instructions, see [CONTRIBUTING.md](https://github.com/srcbookdev/srcbook/blob/main/CONTRIBUTING.md).
+
+## Running dev environment
+
+Copy `packages/api/.env.example` to `packages/api/.env` and add anthropic key.
+
+Run those commands:
+
+```bash
+pnpm install
+pnpm build
+pnpm dev
+```
+
+Then open [http://localhost:5173/](http://localhost:5173/) in the browser.
